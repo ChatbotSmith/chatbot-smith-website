@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="See a Chatbot Smith chatbot working on a real fictional business. Compare all three tiers."> <!-- EDIT ME -->
+  <title>Live Demo — Chatbot Smith</title> <!-- EDIT ME -->
+  <!-- Placeholder favicon — replace with a real .ico file when you have a logo -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💬</text></svg>">
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- PAGE-SPECIFIC CSS if needed goes here -->
+</head>
+<body data-active-page="demo">
+
+  <!-- NAV — injected automatically by js/nav.js. Do not edit here. -->
+  <div id="nav-placeholder"></div>
+
+  <!-- ============================================================ -->
+  <!-- MAIN CONTENT — page-specific sections go between these lines -->
+  <!-- ============================================================ -->
+  <main>
+
+    <!-- ============ DEMO PAGE HERO ============ -->
+    <section class="page-hero section">
+      <div class="container" style="text-align: center;">
+        <!-- EDIT ME: Update headline -->
+        <h1 class="display-heading" style="color: var(--mustard); margin-bottom: 20px;">
+          See it working on a real business.
+        </h1>
+        <!-- EDIT ME: Update subheading -->
+        <p class="body-large" style="color: var(--white); max-width: 600px; margin: 0 auto 48px;">
+          Studio Elara is a fictional salon we built to show you exactly what each tier looks and feels like. Click through the tiers below to compare.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ DEMO SECTION WITH TIER TABS ============ -->
+    <section class="demo-page section" id="demo-section">
+      <div class="container">
+
+        <!-- Demo business label -->
+        <!-- EDIT ME: Update this label when you add new demo business types -->
+        <p class="label-text" style="color: var(--stone); text-align: center; margin-bottom: 24px;">
+          Example business: Studio Elara — Fictional Hair Salon
+        </p>
+
+        <!-- ============ TIER TABS (larger version for dedicated demo page) ============ -->
+        <!-- EDIT ME: Update tab labels if tier names change -->
+        <div class="demo-tabs demo-tabs--large" role="tablist">
+          <button class="demo-tab demo-tab--active" data-tier="1" data-page="demo" role="tab" aria-selected="true">Tier 1 — Essential</button>
+          <button class="demo-tab" data-tier="2" data-page="demo" role="tab" aria-selected="false">Tier 2 — Pro</button>
+          <button class="demo-tab" data-tier="3" data-page="demo" role="tab" aria-selected="false">Tier 3 — Premium</button>
+        </div>
+
+        <!-- Tab descriptions — only the active tier's description is shown -->
+        <!-- EDIT ME: Update descriptions if tier capabilities change -->
+        <p class="body-text demo-page__tab-desc" id="tier-desc-1" style="text-align: center; color: var(--white); max-width: 600px; margin: 0 auto 32px;">
+          This chatbot answers questions only — hours, services, pricing, and location. No booking. Try asking it what services the salon offers.
+        </p>
+        <p class="body-text demo-page__tab-desc" id="tier-desc-2" style="display:none; text-align: center; color: var(--white); max-width: 600px; margin: 0 auto 32px;">
+          This chatbot can book appointments. Try selecting a service, choosing a stylist, and picking a time slot.
+        </p>
+        <p class="body-text demo-page__tab-desc" id="tier-desc-3" style="display:none; text-align: center; color: var(--white); max-width: 600px; margin: 0 auto 32px;">
+          This chatbot has a name (Elara), a distinct personality, and handles everything — including bookings, service suggestions, and prompting happy customers to leave reviews.
+        </p>
+
+        <!-- Browser mockup frame (larger than homepage version) -->
+        <div class="browser-mockup browser-mockup--large">
+          <div class="browser-mockup__toolbar" aria-hidden="true">
+            <div class="browser-mockup__dots">
+              <span class="browser-mockup__dot browser-mockup__dot--red"></span>
+              <span class="browser-mockup__dot browser-mockup__dot--yellow"></span>
+              <span class="browser-mockup__dot browser-mockup__dot--green"></span>
+            </div>
+            <div class="browser-mockup__url-bar">studio-elara.demo</div>
+          </div>
+          <!-- EDIT ME: Update src paths if the salon demo moves to a different location -->
+          <iframe
+            id="demo-page-iframe"
+            class="browser-mockup__iframe browser-mockup__iframe--large"
+            src="demos/salon/index.html?tier=1"
+            title="Studio Elara chatbot demo"
+            loading="lazy">
+          </iframe>
+        </div>
+
+        <!-- Below-demo CTA -->
+        <div style="text-align: center; margin-top: 60px;">
+          <h2 class="section-heading" style="color: var(--white); margin-bottom: 16px;">Want this for your business?</h2>
+          <!-- EDIT ME: Update subtext and CTA -->
+          <p class="body-text" style="color: var(--stone); max-width: 500px; margin: 0 auto 32px;">
+            This demo only scratches the surface. Book a free call and we'll show you what a chatbot built around your business could look like.
+          </p>
+          <a href="book-a-call.html" class="btn-primary">Book a Free Call</a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+  <!-- ============================================================ -->
+
+  <!-- FOOTER — injected automatically by js/footer.js. Do not edit here. -->
+  <div id="footer-placeholder"></div>
+
+  <script src="js/nav.js"></script>
+  <script src="js/footer.js"></script>
+  <!-- PAGE-SPECIFIC JS if needed goes here -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Book a free 20-30 minute call with Chatbot Smith. We'll figure out what you need."> <!-- EDIT ME -->
+  <title>Book a Free Call — Chatbot Smith</title> <!-- EDIT ME -->
+  <!-- Placeholder favicon — replace with a real .ico file when you have a logo -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💬</text></svg>">
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- PAGE-SPECIFIC CSS if needed goes here -->
+</head>
+<body data-active-page="book-a-call">
+
+  <!-- NAV — injected automatically by js/nav.js. Do not edit here. -->
+  <div id="nav-placeholder"></div>
+
+  <!-- ============================================================ -->
+  <!-- MAIN CONTENT — page-specific sections go between these lines -->
+  <!-- ============================================================ -->
+  <main>
+
+    <!-- ============ PAGE HERO ============ -->
+    <section class="page-hero section">
+      <div class="container" style="text-align: center;">
+        <!-- EDIT ME: Update headline -->
+        <h1 class="display-heading" style="color: var(--mustard); margin-bottom: 20px;">
+          Let's talk about your business.
+        </h1>
+        <!-- EDIT ME: Update subheading -->
+        <p class="body-large" style="color: var(--white); max-width: 580px; margin: 0 auto;">
+          Book a free 20–30 minute call. We'll figure out what you need — and if Chatbot Smith isn't the right fit, we'll tell you that too.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ TWO-COLUMN LAYOUT: WHAT TO EXPECT + CONTACT FORM ============ -->
+    <section class="book-call section">
+      <div class="container book-call__inner">
+
+        <!-- LEFT: What to expect -->
+        <div class="book-call__left">
+
+          <!-- EDIT ME: Update heading -->
+          <h2 class="card-heading book-call__left-heading">What happens on the call?</h2>
+
+          <ol class="book-call__steps">
+            <!-- EDIT ME: Update each step -->
+            <li class="book-call__step">We ask about your business — what you do, how customers reach you, and what questions you're tired of answering.</li>
+            <li class="book-call__step">We explain what your chatbot would actually do, based on what you've told us.</li>
+            <li class="book-call__step">We recommend a tier. If Tier 1 is all you need, we'll say so — even if Tier 3 costs more.</li>
+            <li class="book-call__step">If you want to move forward, we schedule the build. If you don't, no hard feelings.</li>
+          </ol>
+
+          <div class="book-call__meta">
+            <!-- EDIT ME: Update call details -->
+            <div class="book-call__meta-row">
+              <span class="label-text book-call__meta-label">Duration</span>
+              <span class="body-text book-call__meta-value">About 20–30 minutes.</span>
+            </div>
+            <div class="book-call__meta-row">
+              <span class="label-text book-call__meta-label">Format</span>
+              <span class="body-text book-call__meta-value">Video or phone — your choice.</span>
+            </div>
+            <div class="book-call__meta-row">
+              <span class="label-text book-call__meta-label">Cost</span>
+              <span class="body-text book-call__meta-value">Free.</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- RIGHT: Contact form -->
+        <div class="book-call__right">
+
+          <!-- EDIT ME: Update heading -->
+          <h2 class="card-heading book-call__form-heading">Book your call</h2>
+
+          <!--
+            TODO: Connect this form to your backend, Formspree, or Calendly.
+            Easiest option: Go to formspree.io, create a free account, create a form,
+            then replace the <form> tag below with:
+            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            and remove the JS form submit handler at the bottom of main.js.
+
+            OPTIONAL: Replace the entire form with a Calendly embed:
+            <div class="calendly-inline-widget" data-url="YOUR_CALENDLY_URL" style="min-width:320px;height:630px;"></div>
+            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+          -->
+          <form class="book-call__form" id="book-call-form" novalidate>
+
+            <div class="form-field">
+              <!-- EDIT ME: Update field labels as needed -->
+              <label class="form-label label-text" for="field-name">Your Name</label>
+              <input class="form-input" type="text" id="field-name" name="name" required placeholder="Jane Smith">
+            </div>
+
+            <div class="form-field">
+              <label class="form-label label-text" for="field-business">Business Name</label>
+              <input class="form-input" type="text" id="field-business" name="business" required placeholder="Main Street Salon">
+            </div>
+
+            <div class="form-field">
+              <label class="form-label label-text" for="field-email">Email Address</label>
+              <input class="form-input" type="email" id="field-email" name="email" required placeholder="jane@yourbusiness.com">
+            </div>
+
+            <div class="form-field">
+              <!-- EDIT ME: Update dropdown options to match your target industries -->
+              <label class="form-label label-text" for="field-type">Business Type</label>
+              <select class="form-input form-select" id="field-type" name="business_type">
+                <option value="">Select one...</option>
+                <option value="salon">Hair Salon</option>
+                <option value="barbershop">Barbershop</option>
+                <option value="cleaning">Cleaning Service</option>
+                <option value="fitness">Fitness Studio</option>
+                <option value="consultant">Consultant</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <!-- EDIT ME: Update placeholder text -->
+              <label class="form-label label-text" for="field-challenge">What's your biggest customer service challenge?</label>
+              <textarea class="form-input form-textarea" id="field-challenge" name="challenge" rows="4" placeholder="e.g. I spend hours answering DMs about my hours and pricing."></textarea>
+            </div>
+
+            <div class="form-field">
+              <!-- EDIT ME: Update referral source options -->
+              <label class="form-label label-text" for="field-referral">How did you hear about us?</label>
+              <select class="form-input form-select" id="field-referral" name="referral">
+                <option value="">Select one...</option>
+                <option value="google">Google</option>
+                <option value="instagram">Instagram</option>
+                <option value="referral">Referral</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn-primary book-call__submit">Request My Free Call</button>
+
+            <p class="caption-text book-call__disclaimer">
+              <!-- EDIT ME: Update disclaimer text -->
+              No spam, ever. We'll email you within 24 hours to confirm your slot.
+            </p>
+
+          </form>
+
+          <!-- Success message (hidden until form is submitted) -->
+          <div class="book-call__success" id="book-call-success" hidden>
+            <!-- EDIT ME: Update success message -->
+            <h2 class="section-heading book-call__success-heading">You're booked!</h2>
+            <p class="body-large" style="color: var(--white);">We've got your request. You'll hear from us within 24 hours to confirm your call time. Talk soon.</p>
+          </div>
+
+        </div><!-- end .book-call__right -->
+
+      </div>
+    </section>
+
+  </main>
+  <!-- ============================================================ -->
+
+  <!-- FOOTER — injected automatically by js/footer.js. Do not edit here. -->
+  <div id="footer-placeholder"></div>
+
+  <script src="js/nav.js"></script>
+  <script src="js/footer.js"></script>
+  <!-- PAGE-SPECIFIC JS if needed goes here -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>
