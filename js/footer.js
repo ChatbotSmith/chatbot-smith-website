@@ -34,7 +34,7 @@ const footerHTML = `
       <!-- ===== RIGHT: GET IN TOUCH ===== -->
       <div class="footer-col footer-col-right">
         <p class="label-text footer-touch-label">Get in Touch</p>
-        <a href="mailto:hello@chatbotsmith.com" class="footer-email">hello@chatbotsmith.com</a> <!-- EDIT ME -->
+        <a href="mailto:hello@chatbotsmith.com" class="footer-email">msmith@chatbotsmith.com</a> <!-- EDIT ME -->
         <div class="footer-social">
           <a href="#" target="_blank" rel="noopener">IG</a> <!-- EDIT ME: replace with real profile URL -->
           <a href="#" target="_blank" rel="noopener">LI</a> <!-- EDIT ME: replace with real profile URL -->
