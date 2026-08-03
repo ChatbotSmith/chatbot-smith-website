@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var script = document.createElement('script');
   script.src = 'https://chatbot-smith-backend.up.railway.app/widget.js';
   script.setAttribute('data-client-id', 'botsmith');
-  script.setAttribute('data-api-key', '4e1a7002ebfda552f811b5fe9537e8bb92b2ee28d494c6fc48a35aa4868e5a37');
+  script.setAttribute('data-api-key', '178ab4398ed07d0bfb34b8b1b91eabfb9fcb8d2e05a57c9007064945eb4d68b5');
   script.async = true;
   document.head.appendChild(script);
 })();
