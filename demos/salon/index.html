@@ -516,20 +516,29 @@
   <!-- ============ CHATBOT WIDGET ============ -->
   <!-- The chatbot widget is injected here by the next prompt (Prompt 14). -->
   <!-- Do not add anything here manually. -->
+  <div id="chatbot-widget-container"></div>
 
   <script>
     // =============================================
     // STUDIO ELARA — Live AI Chatbot
     // Powered by Chatbot Smith (widget.js)
     // =============================================
-    (function() {
-      var script = document.createElement('script');
-      script.src = 'https://chatbot-smith-backend.up.railway.app/widget.js';  // EDIT ME
-      script.setAttribute('data-client-id', 'demo_salon');
-      script.setAttribute('data-api-key', '3ff5603a3803e2a1355d90eb75a07315dffacc5049b6b9cb8e8412bc697af888');  // EDIT ME
-      script.async = true;
-      document.head.appendChild(script);
-    })();
-  </script>
+
+ (function() {
+  var tier = new URLSearchParams(window.location.search).get('tier') || '1';
+  var configs = {
+    '1': { clientId: 'demo_studio_1', apiKey: 'd72b697793c1f0a8f1e18af5318ee2cd739ce1293d0df30e0d03f00e7f375a56' },
+    '2': { clientId: 'deom_studio_2', apiKey: 'fd4452ac8e4e341dc5471acf98b1edf14cbf6774d274cb962b19ff54cc93d514' },
+    '3': { clientId: 'demo_studio_3', apiKey: '8693733f1862b6caecbfa92fc2b5dd76119129306eca0da48ca26b4bce2af1a2' },
+  };
+  var c = configs[tier] || configs['1'];
+  var script = document.createElement('script');
+  script.src = 'https://chatbot-smith-backend.up.railway.app/widget.js';
+  script.setAttribute('data-client-id', c.clientId);
+  script.setAttribute('data-api-key', c.apiKey);
+  script.async = true;
+  document.head.appendChild(script);
+})();
+</script>
 </body>
 </html>
